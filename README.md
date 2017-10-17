@@ -151,29 +151,19 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
         "id": "618",
         "value": 5,
         "status": "RECEBIDO",
-        "received_date": "2017-10-13T16:10:44.000Z",
-        "returned_date": null,
-        "finish_date": null,
         "number": 4,
-        "created_at": "2017-10-13T14:34:01.000Z",
         "payer_name": null,
         "payer_cpf_cnpj": null,
-        "transfers_list_report_file": null,
-        "user_id": 1
+        "created_at": "2017-10-13T14:34:01.000Z"
     },
     {
         "id": "623",
         "value": 6.5,
         "status": "AGUARDANDO_RECEBIMENTO",
-        "received_date": null,
-        "returned_date": null,
-        "finish_date": null,
         "number": 9,
-        "created_at": "2017-10-16T13:18:40.000Z",
         "payer_name": null,
         "payer_cpf_cnpj": null,
-        "transfers_list_report_file": null,
-        "user_id": 1
+        "created_at": "2017-10-16T13:18:40.000Z"
     }
 ]
 ```
@@ -206,37 +196,72 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ### Response
 
 ```
+{
+    "id": "5589",
+    "value": 25,
+    "status": "CRIADA",
+    "destination_bank_account_id": 5029,
+    "batch_id": "617"
+}
 ```
 
 ## Consultar transferência
 
 ### Request
-`GET /batch/{id}/transfer/{id}`
+`GET /transfer/{id}`
 
 ### Response
 
 ```
+{
+    "id": "5490",
+    "value": 5,
+    "status": "RECEBIDO",
+    "integration_id": null,
+    "created_at": "2017-10-13T14:34:01.000Z",
+    "destination_bank_account_id": 5027,
+    "receipt_url": null,
+    "bank_receipt_url": null
+}
 ```
 
 ## Consultar transferências dentro de um lote
 
 ### Request
-`GET /batch/{id}/transfers`
+`GET /batch/{id}/transfer`
 
 ### Response
 
 ```
+[
+    {
+        "id": "5490",
+        "value": 5,
+        "status": "RECEBIDO",
+        "created_at": "2017-10-13T14:34:01.000Z",
+        "integration_id": null,
+        "DestinationBankAccount": {
+            "id": 5027,
+            "name": "Rafael Negherbon",
+            "cpf_cnpj": "08910914912",
+            "bank_id": 1,
+            "email": null,
+            "agency": "123",
+            "agency_digit": null,
+            "account": "123",
+            "account_digit": "1",
+            "account_type": "CONTA_CORRENTE"
+        },
+        "receipt_url": null,
+        "bank_receipt_url": null
+    }
+]
 ```
 
 ## Excluir transferência
 
 ### Request
 `DELETE /transfer/{id}`
-
-### Response
-
-```
-```
 
 ## Consultar bancos 
 `GET /banks`
