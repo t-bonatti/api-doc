@@ -264,10 +264,35 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 `DELETE /transfer/{id}`
 
 ## Consultar bancos 
-`GET /banks`
+`GET /bank`
 
 ### Response
 
 ```
-
+[
+    {
+        "id": 5,
+        "name": "Itaú"
+    },
+    {
+        "id": 1,
+        "name": "Santander"
+    },
+    {
+        "id": 4,
+        "name": "Bradesco"
+    },
+    {
+        "id": 6,
+        "name": "Banco do Brasil"
+    },
+    {
+        "id": 7,
+        "name": "Sicoob"
+    },
+    {
+        "id": 3,
+        "name": "Caixa Econômica"
+    }
+]
 ```
