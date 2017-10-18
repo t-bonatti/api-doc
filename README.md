@@ -296,3 +296,26 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
     }
 ]
 ```
+
+## Consultar favorecidos 
+`GET /destinationBankAccount`
+
+### Response
+
+```
+[
+    {
+        "id": 5028,
+        "name": "Favorecido teste",
+        "account": "16232",
+        "account_digit": "6",
+        "agency": "3299",
+        "agency_digit": null,
+        "cpf_cnpj": "08910914912",
+        "email": null,
+        "bank_id": 3,
+        "created_at": "2017-10-16T15:16:58.000Z"
+    }
+]
+```
+
