@@ -10,8 +10,30 @@ A API da Transfeera possibilita que aplicações se comuniquem com a sua conta n
 
 # Fazendo uma requisição
 
-A autenticação de todas request é via Bearer token:
-Basta adicionar a seguinte propriedade no Header de cada requisição
+A autenticação de todas request é via Bearer token, para ter acesso ao token siga as instruções abaixo:
+- Faça um request passando seu login e senha do seu usuário cadastrado no Transfeera
+
+### Request
+`POST https://api.transfeera.com/authenticate`
+
+### Form data
+
+```
+{
+  login: <seuEmail>
+  password: <suaSenha>
+}
+```
+
+### Response
+
+```
+{
+  token: 'seuTokenDeAcesso'
+}
+```
+
+Agora com o token basta adicionar a seguinte propriedade no Header de cada requisição
 - Authorization: {token_de_acesso}
 
 Todas as requisições são criptografadas, a Transfeera não aceita requisições feitas com HTTP simples, apenas HTTPS. A URL base da API é https://api.transfeera.com/
