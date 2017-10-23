@@ -117,6 +117,13 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ## Request
 `POST /batch`
 
+### Body
+`Precisa ser enviado um objeto vazio.`
+```
+{
+}
+```
+
 ## Response
 
 ```
