@@ -410,7 +410,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ## Excluir transferência
 
 ### Request
-`DELETE /transfer/{id}`
+`DELETE /batch/{id}/transfer/{id}`
 
 ## Consultar bancos 
 `GET /bank`
