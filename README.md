@@ -1,10 +1,28 @@
-# Transfeera API
+# Introdução
 
 - [Introdução](#introdução)
 - [Fazendo uma requisição](#fazendo-uma-requisição)
 - [Apenas JSON](#apenas-json)
 - [Status dos lotes](#status-dos-lotes)
 - [Status das transferências](#status-das-transferências)
+- [Contas bancárias da Transfeera](#contas-bancárias-da-transfeera)
+
+# API
+
+- [Criar lote sem nenhuma transferência](#criar-lote-sem-nenhuma-transferência)
+- [Criar lote com transferências](#criar-lote-com-transferências)
+- [Editar lote](#editar-lote)
+- [Consultar lote](#consultar-lote)
+- [Fechar lote](#fechar-lote)
+- [Excluir lote](#excluir-lote)
+- [Consultar lotes](#consultar-lotes)
+- [Criar transferência](#criar-transferência)
+- [Consultar transferência](#consultar-transferência)
+- [Consultar transferências dentro de um lote](consultar-transferências-dentro-de-um-lote)
+- [Excluir transferência](#excluir-transferência)
+- [Consultar bancos](#consultar-bancos)
+- [Consultar favorecidos](#consultar-favorecidos)
+
 
 # Introdução
 
@@ -67,6 +85,32 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 - FINALIZADO: Transferência efetuada e comprovante bancário recebido
 - REMOVIDO: Removido
 - FALHA: Tentamos efetuar o pagamento, porém, por motivos de falha dos dados do favorecido ou falha na comunicação com o internet banking a transferência não foi efetuada.
+
+# Contas bancárias da Transfeera
+
+## Banco do Brasil
+- Agência: 5214-0
+- Conta: 13568-2
+
+## Santander
+- Agência: 0159 
+- Conta: 13006828-3
+
+## Bradesco
+- Agência: 2232
+- Conta: 40605-8
+
+## Itaú
+- Agência: 8842
+- Conta: 47600-7
+
+## Caixa Econômica
+- Agência: 3282
+- Conta: 1172-7
+
+## Sicoob
+- Agência: 3039
+- Conta: 62277-0
 
 # Criar lote sem nenhuma transferência
 
