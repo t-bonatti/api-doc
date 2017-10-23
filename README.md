@@ -345,11 +345,12 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 
 ```
 {
-    "id": "5589",
+    "id": "7198",
     "value": 25,
     "status": "CRIADA",
-    "destination_bank_account_id": 5029,
-    "batch_id": "617"
+    "destination_bank_account_id": "5479",
+    "batch_id": "793",
+    "integration_id": "2"
 }
 ```
 
