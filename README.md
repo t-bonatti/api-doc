@@ -18,7 +18,7 @@
 - [Consultar lotes](#consultar-lotes)
 - [Criar transferência](#criar-transferência)
 - [Consultar transferência](#consultar-transferência)
-- [Consultar transferências dentro de um lote](consultar-transferências-dentro-de-um-lote)
+- [Consultar transferências dentro de um lote](#consultar-transferências-dentro-de-um-lote)
 - [Excluir transferência](#excluir-transferência)
 - [Consultar bancos](#consultar-bancos)
 - [Consultar favorecidos](#consultar-favorecidos)
