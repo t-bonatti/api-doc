@@ -122,6 +122,8 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 
 ```
 {
+    payer_name: 'Fulano souza',
+    payer_cpf_cnpj: '73677801400',
     transfers: [
        {
         "id": 5483, #caso queira editar uma transferência dentro do lote
