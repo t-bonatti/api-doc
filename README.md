@@ -41,8 +41,7 @@ Todas as requisições são criptografadas, a Transfeera não aceita requisiçõ
 Todas as requisições à API da Transfeera devem ser acompanhadas do header User-Agent, use este header para informar qual a sua aplicação e qual o seu email para contato. Veja alguns exemplos de como você pode se identificar usando o header User-Agent:
 
 ```
-User-Agent: Meu Site (falecom@admin.com.br)
-User-Agent: Controle de Estoque (controledeestoque.com.br)
+User-Agent: Sua empresa (contato@suaempresa.com.br)
 ```
 
 
@@ -67,6 +66,57 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 # Criar lote com transferências
 ### Request
 `POST /batch`
+
+### Body
+
+```
+{
+    transfers: [
+       {
+        "value": 25.0,
+        "integration_id": 2,
+        "destination_bank_account": {
+          "name": "Fernando Nunes 2",
+          "cpf_cnpj": "08910914912",
+          "bank_id": 1,
+          "email": "",
+          "agency": "3299",
+          "agency_digit": "0",
+          "account": "16232",
+          "account_digit": "7",
+          "account_type": "CONTA_CORRENTE"
+        }
+       },
+       { 
+        "value": 25.0,
+        "integration_id": 2,
+        "destination_bank_account": {
+          "name": "Fernando Nunes 2",
+          "cpf_cnpj": "08910914912",
+          "bank_id": 1,
+          "email": "",
+          "agency": "3299",
+          "agency_digit": "0",
+          "account": "16232",
+          "account_digit": "7",
+          "account_type": "CONTA_CORRENTE"
+        }
+       }
+    ]
+}
+```
+
+### Response
+
+```
+{
+  id: #idDoLoteCriado
+}
+```
+
+# Editar lote
+### Request
+`PUT /batch/{id}`
 
 ### Body
 
@@ -113,7 +163,12 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 
 ```
 {
-  id: #idDoLoteCriado
+  id: 10,
+  value: 50.0,
+  number: 2,
+  created_at: "2017-10-13T14:30:24.000Z",
+  payer_name: null,
+  payer_cpf_cnpj: null,
 }
 ```
 
