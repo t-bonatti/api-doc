@@ -142,19 +142,19 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 
 ```
 {
-    transfers: [
+    "transfers": [
        {
         "value": 25.0,
         "integration_id": 2,
         "destination_bank_account": {
-          "name": "Fernando Nunes 2",
-          "cpf_cnpj": "08910914912",
+          "name": "Fulano de souza",
+          "cpf_cnpj": "12863843893",
           "bank_id": 1,
           "email": "",
-          "agency": "3299",
+          "agency": "3333",
           "agency_digit": "0",
-          "account": "16232",
-          "account_digit": "7",
+          "account": "12345",
+          "account_digit": "1",
           "account_type": "CONTA_CORRENTE"
         }
        },
@@ -162,14 +162,14 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
         "value": 25.0,
         "integration_id": 2,
         "destination_bank_account": {
-          "name": "Fernando Nunes 2",
-          "cpf_cnpj": "08910914912",
+          "name": "Fulano de souza",
+          "cpf_cnpj": "12863843893",
           "bank_id": 1,
           "email": "",
-          "agency": "3299",
+          "agency": "3333",
           "agency_digit": "0",
-          "account": "16232",
-          "account_digit": "7",
+          "account": "12345",
+          "account_digit": "1",
           "account_type": "CONTA_CORRENTE"
         }
        }
@@ -201,14 +201,14 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
         "value": 25.0,
         "integration_id": 2,
         "destination_bank_account": {
-          "name": "Fernando Nunes 2",
-          "cpf_cnpj": "08910914912",
+          "name": "Fulano de souza",
+          "cpf_cnpj": "12863843893",
           "bank_id": 1,
           "email": "",
-          "agency": "3299",
+          "agency": "3333",
           "agency_digit": "0",
-          "account": "16232",
-          "account_digit": "7",
+          "account": "12345",
+          "account_digit": "1",
           "account_type": "CONTA_CORRENTE"
         }
        },
@@ -217,14 +217,14 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
         "value": 25.0,
         "integration_id": 2,
         "destination_bank_account": {
-          "name": "Fernando Nunes 2",
-          "cpf_cnpj": "08910914912",
+          "name": "Fulano de souza",
+          "cpf_cnpj": "12863843893",
           "bank_id": 1,
           "email": "",
-          "agency": "3299",
+          "agency": "3333",
           "agency_digit": "0",
-          "account": "16232",
-          "account_digit": "7",
+          "account": "12345",
+          "account_digit": "1",
           "account_type": "CONTA_CORRENTE"
         }
        }
@@ -330,14 +330,14 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
   "value": 25.0,
   "integration_id": 2,
   "destination_bank_account": {
-    "name": "Fernando Nunes 2",
-    "cpf_cnpj": "08910914912",
+    "name": "Fulano de souza",
+    "cpf_cnpj": "12863843893",
     "bank_id": 1,
     "email": "",
-    "agency": "3299",
+    "agency": "3333",
     "agency_digit": "0",
-    "account": "16232",
-    "account_digit": "7",
+    "account": "12345",
+    "account_digit": "1",
     "account_type": "CONTA_CORRENTE"
   }
 }
@@ -393,8 +393,8 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
         "integration_id": null,
         "DestinationBankAccount": {
             "id": 5027,
-            "name": "Rafael Negherbon",
-            "cpf_cnpj": "08910914912",
+            "name": "Fulano de souza",
+            "cpf_cnpj": "12863843893",
             "bank_id": 1,
             "email": null,
             "agency": "123",
@@ -457,12 +457,12 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 [
     {
         "id": 5028,
-        "name": "Favorecido teste",
-        "account": "16232",
-        "account_digit": "6",
+        "name": "Fulano de souza",
+        "account": "1234",
+        "account_digit": "1",
         "agency": "3299",
         "agency_digit": null,
-        "cpf_cnpj": "08910914912",
+        "cpf_cnpj": "12863843893",
         "email": null,
         "bank_id": 3,
         "created_at": "2017-10-16T15:16:58.000Z"
