@@ -2,7 +2,7 @@
 
 - [Introdução](#introdução)
 - [Fazendo uma requisição](#fazendo-uma-requisição)
-- [Utilização da API via JSON](#utilizacao-da-api-via-json)
+- [Utilização da API via JSON](#utilização-da-api-via-json)
 - [Status dos lotes](#status-dos-lotes)
 - [Status das transferências](#status-das-transferências)
 - [Contas bancárias da Transfeera](#contas-bancárias-da-transfeera)
@@ -30,7 +30,7 @@ A API da Transfeera possibilita que aplicações externas se comuniquem com a su
 
 # Fazendo uma requisição
 
-A autenticação das requisições é realizada via token, para ter acesso ao token siga as instruções abaixo:
+A autenticação das requisições é realizada via token, paara ter acesso ao token siga as instruções abaixo:
 
 
 Faça um request passando seu login e senha do seu usuário cadastrado no Transfeera
