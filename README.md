@@ -2,7 +2,7 @@
 
 - [Introdução](#introdução)
 - [Fazendo uma requisição](#fazendo-uma-requisição)
-- [Apenas JSON](#apenas-json)
+- [Utilização da API via JSON](#utilizacao-da-api-via-json)
 - [Status dos lotes](#status-dos-lotes)
 - [Status das transferências](#status-das-transferências)
 - [Contas bancárias da Transfeera](#contas-bancárias-da-transfeera)
@@ -26,11 +26,13 @@
 
 # Introdução
 
-A API da Transfeera possibilita que aplicações se comuniquem com a sua conta no sistema. Este documento explica quais os métodos disponíveis para acesso.
+A API da Transfeera possibilita que aplicações externas se comuniquem com a sua conta na plataforma Transfeera. Este documento explica quais os métodos disponíveis para acesso.
 
 # Fazendo uma requisição
 
-A autenticação de todas request é via token, para ter acesso ao token siga as instruções abaixo:
+A autenticação das requisições é realizada via token, para ter acesso ao token siga as instruções abaixo:
+
+
 Faça um request passando seu login e senha do seu usuário cadastrado no Transfeera
 
 ### Request
@@ -65,23 +67,23 @@ User-Agent: Sua empresa (contato@suaempresa.com.br)
 ```
 
 
-# Apenas JSON
+# Utilização da API via JSON
 
 A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que você não utilize o header ```Content-Type: application/json; charset=utf-8``` a resposta será em JSON e com charset utf-8.
 
 # Status dos lotes
-- AGUARDANDO_RECEBIMENTO: Aguardando receber o pagamento
+- AGUARDANDO_RECEBIMENTO: Aguardando receber o valor total do lote na conta bancária da Transfeera
 - RECEBIDO: Identificamos o pagamento do lote na nossa conta bancária
 - FINALIZADO: Efetuamos todas as transferências e enviamos o relatório
 - REMOVIDO: Lote removido
-- RASCUNHO: Lote em rascunho aguardando fechamento
-- DEVOLVIDO: Todas as transferências do lote devolvidas
+- RASCUNHO: Lote em rascunho aceita a inserção de novas transferências até ser fechado
+- DEVOLVIDO: O valor total do lote, ou seja, a soma de todas as transferências, foi devolvido para o usuário
 
 
 # Status das transferências
 - CRIADA: Criada com sucesso
 - RECEBIDO: Identificamos o pagamento da transferência na nossa conta bancária
-- TRANSFERIDO: Transferência efetuada
+- TRANSFERIDO: Transferência efetuada porém ainda sem comprovante bancário linkado
 - FINALIZADO: Transferência efetuada e comprovante bancário recebido
 - REMOVIDO: Removido
 - FALHA: Tentamos efetuar o pagamento, porém, por motivos de falha dos dados do favorecido ou falha na comunicação com o internet banking a transferência não foi efetuada.
