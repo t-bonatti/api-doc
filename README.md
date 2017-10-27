@@ -161,7 +161,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
           "agency_digit": "0",
           "account": "12345",
           "account_digit": "1",
-          "account_type": "CONTA_CORRENTE" # CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
         }
        },
        { 
@@ -176,7 +176,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
           "agency_digit": "0",
           "account": "12345",
           "account_digit": "1",
-          "account_type": "CONTA_CORRENTE" # CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
         }
        }
     ]
@@ -215,7 +215,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
           "agency_digit": "0",
           "account": "12345",
           "account_digit": "1",
-          "account_type": "CONTA_CORRENTE" # CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
         }
        },
        { 
@@ -231,7 +231,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
           "agency_digit": "0",
           "account": "12345",
           "account_digit": "1",
-          "account_type": "CONTA_CORRENTE" # CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
         }
        }
     ]
@@ -344,7 +344,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
     "agency_digit": "0",
     "account": "12345",
     "account_digit": "1",
-    "account_type": "CONTA_CORRENTE" # CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+    "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
   }
 }
 ```
@@ -407,7 +407,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
             "agency_digit": null,
             "account": "123",
             "account_digit": "1",
-            "account_type": "CONTA_CORRENTE" # CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+            "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
         },
         "receipt_url": null,
         "bank_receipt_url": null
