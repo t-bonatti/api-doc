@@ -9,6 +9,7 @@
 
 # API
 
+- [Tipo de contas suportados](#tipo-de-contas-suportados)
 - [Criar lote sem nenhuma transferência](#criar-lote-sem-nenhuma-transferência)
 - [Criar lote com transferências](#criar-lote-com-transferências)
 - [Editar lote](#editar-lote)
@@ -113,6 +114,11 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ## Sicoob
 - Agência: 3039
 - Conta: 62277-0
+
+# Tipo de contas suportados
+- CONTA_CORRENTE: Conta corrente
+- CONTA_POUPANCA: Conta poupança
+- CAIXA_FACIL: Conta caixa fácil
 
 # Criar lote sem nenhuma transferência
 
