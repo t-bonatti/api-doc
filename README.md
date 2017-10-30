@@ -43,7 +43,7 @@ Faça um request passando seu login e senha do seu usuário cadastrado no Transf
 
 ```
 {
-  login: <seuEmail>
+  email: <seuEmail>
   password: <suaSenha>
 }
 ```
