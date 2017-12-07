@@ -96,7 +96,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 - Conta: 13568-2
 
 ## Santander
-- Agência: 0159 
+- Agência: 0159
 - Conta: 13006828-3
 
 ## Bradesco
@@ -164,7 +164,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
           "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
         }
        },
-       { 
+       {
         "value": 25.0,
         "integration_id": 2,
         "destination_bank_account": {
@@ -218,7 +218,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
           "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
         }
        },
-       { 
+       {
         ## sem ID vai criar uma nova transferência
         "value": 25.0,
         "integration_id": 2,
@@ -244,7 +244,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 {
   id: 10,
   value: 50.0,
-  number: 2,
+  name: "Lote 2",
   created_at: "2017-10-13T14:30:24.000Z",
   payer_name: null,
   payer_cpf_cnpj: null,
@@ -263,7 +263,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
     "id": "617",
     "value": 5,
     "status": "REMOVIDO",
-    "number": 3,
+    "name": "Lote 3",
     "payer_name": null,
     "payer_cpf_cnpj": null,
     "received_date": null,
@@ -307,7 +307,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
         "id": "618",
         "value": 5,
         "status": "RECEBIDO",
-        "number": 4,
+        "name": "Lote 4",
         "payer_name": null,
         "payer_cpf_cnpj": null,
         "created_at": "2017-10-13T14:34:01.000Z"
@@ -316,7 +316,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
         "id": "623",
         "value": 6.5,
         "status": "AGUARDANDO_RECEBIMENTO",
-        "number": 9,
+        "name": "Lote 9",
         "payer_name": null,
         "payer_cpf_cnpj": null,
         "created_at": "2017-10-16T13:18:40.000Z"
@@ -420,7 +420,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ### Request
 `DELETE /batch/{id}/transfer/{id}`
 
-## Consultar bancos 
+## Consultar bancos
 `GET /bank`
 
 ### Response
@@ -454,7 +454,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ]
 ```
 
-## Consultar favorecidos 
+## Consultar favorecidos
 `GET /destinationBankAccount`
 
 ### Response
@@ -475,4 +475,3 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
     }
 ]
 ```
-
