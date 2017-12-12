@@ -407,7 +407,10 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
             "agency_digit": null,
             "account": "123",
             "account_digit": "1",
-            "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+            "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL,
+            "Bank": {
+              "name": "Banco do Brasil"
+            }
         },
         "receipt_url": null,
         "bank_receipt_url": null
