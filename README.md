@@ -33,7 +33,7 @@ A API da Transfeera possibilita que aplicações externas se comuniquem com a su
 
 A autenticação das requisições é realizada via token, para ter acesso ao token entre em contato com a Transfeera pelo e-mail contato@transfeera.com.
 
-Quando for liberado o acesso à API para o seu usuário acesse https://app.transfeera.com/api e gere m token de acesso.
+Quando a API for liberada para o seu usuário, acesse https://app.transfeera.com/api e gere um token de acesso.
 
 Com o token basta adicionar a seguinte propriedade no Header de cada requisição:
 - Authorization: {token_de_acesso}
