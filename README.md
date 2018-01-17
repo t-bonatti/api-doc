@@ -1,7 +1,7 @@
 # Introdução
 
 - [Introdução](#introdução)
-- [Fazendo uma requisição](#fazendo-uma-requisição)
+- [Autenticação](#autenticação)
 - [Utilização da API via JSON](#utilização-da-api-via-json)
 - [Status dos lotes](#status-dos-lotes)
 - [Status das transferências](#status-das-transferências)
@@ -29,37 +29,16 @@
 
 A API da Transfeera possibilita que aplicações externas se comuniquem com a sua conta na plataforma Transfeera. Este documento explica quais os métodos disponíveis para acesso.
 
-# Fazendo uma requisição
+# Autenticação
 
-A autenticação das requisições é realizada via token, paara ter acesso ao token siga as instruções abaixo:
+A autenticação das requisições é realizada via token, para ter acesso ao token entre em contato com a Transfeera pelo e-mail contato@transfeera.com.
 
+Quando for liberado o acesso à API para o seu usuário acesse https://app.transfeera.com/api e gere m token de acesso.
 
-Faça um request passando seu login e senha do seu usuário cadastrado no Transfeera
-
-### Request
-`POST https://api.transfeera.com/authenticate`
-
-### Form data
-
-```
-{
-  email: <seuEmail>
-  password: <suaSenha>
-}
-```
-
-### Response
-
-```
-{
-  token: 'seuTokenDeAcesso'
-}
-```
-
-Agora com o token basta adicionar a seguinte propriedade no Header de cada requisição
+Com o token basta adicionar a seguinte propriedade no Header de cada requisição:
 - Authorization: {token_de_acesso}
 
-Todas as requisições são criptografadas, a Transfeera não aceita requisições feitas com HTTP simples, apenas HTTPS. A URL base da API é https://api.transfeera.com/
+Todas as requisições são criptografadas, a Transfeera não aceita requisições feitas com HTTP simples, apenas HTTPS. A URL base da API é https://api.transfeera.com/.
 
 Todas as requisições à API da Transfeera devem ser acompanhadas do header User-Agent, use este header para informar qual a sua aplicação e qual o seu email para contato. Veja alguns exemplos de como você pode se identificar usando o header User-Agent:
 
