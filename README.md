@@ -25,87 +25,89 @@
 - [Consultar favorecidos](#consultar-favorecidos)
 
 
-# Introdução
+# Introduction
 
-A API da Transfeera possibilita que aplicações externas se comuniquem com a sua conta na plataforma Transfeera. Este documento explica quais os métodos disponíveis para acesso.
+The Transfeera API enables external applications to communicate with your account on our platform. This document explains the methods that are available.
 
-# Autenticação
+# Authentication
 
-A autenticação das requisições é realizada via token, para ter acesso ao token entre em contato com a Transfeera pelo e-mail contato@transfeera.com.
+The authentication of the requests is performed using a token, to get enable access to the API and generate a Token, please contact us by email contato@transfeera.com.
 
-Quando a API for liberada para o seu usuário, acesse a plataforma, e no menu com o seu nome clique em "Segurança", e na seção "API" gere uma chave de acesso.
+When we enabled the API for your user, access our platform, and in the menu with your name click on "Segurança" (Security), and in the "API" section generate a token.
 
-Com o token basta adicionar a seguinte propriedade no Header de cada requisição:
-- Authorization: {token_de_acesso}
-
-Todas as requisições são criptografadas, a Transfeera não aceita requisições feitas com HTTP simples, apenas HTTPS. A URL base da API é https://api.transfeera.com/.
-
-Todas as requisições à API da Transfeera devem ser acompanhadas do header User-Agent, use este header para informar qual a sua aplicação e qual o seu email para contato. Veja alguns exemplos de como você pode se identificar usando o header User-Agent:
-
+With the token you obtained, on every request to our API include a header with the token like this:
 ```
-User-Agent: Sua empresa (contato@suaempresa.com.br)
+Authorization: {token}
 ```
 
+All our requests are encrypted, Transfeera does not accept requests made with simple HTTP, only HTTPS. The base URL to the API is https://api.transfeera.com/.
 
-# Utilização da API via JSON
+All requests to the Transfeera API must be sent with the User-Agent header. Use this header to tell us which application and email address to contact. Here is an example of how you can identify yourself using the User-Agent header:
 
-A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que você não utilize o header ```Content-Type: application/json; charset=utf-8``` a resposta será em JSON e com charset utf-8.
-
-# Status dos lotes
-- AGUARDANDO_RECEBIMENTO: Aguardando receber o valor total do lote na conta bancária da Transfeera
-- RECEBIDO: Identificamos o pagamento do lote na nossa conta bancária
-- FINALIZADO: Efetuamos todas as transferências e enviamos o relatório
-- REMOVIDO: Lote removido
-- RASCUNHO: Lote em rascunho aceita a inserção de novas transferências até ser fechado
-- DEVOLVIDO: O valor total do lote, ou seja, a soma de todas as transferências, foi devolvido para o usuário
+```
+User-Agent: Company (contact@company.com)
+```
 
 
-# Status das transferências
-- CRIADA: Criada com sucesso
-- RECEBIDO: Identificamos o pagamento da transferência na nossa conta bancária
-- TRANSFERIDO: Transferência efetuada porém ainda sem comprovante bancário linkado
-- FINALIZADO: Transferência efetuada e comprovante bancário recebido
-- REMOVIDO: Removido
-- FALHA: Tentamos efetuar o pagamento, porém, por motivos de falha dos dados do favorecido ou falha na comunicação com o internet banking a transferência não foi efetuada.
+# Using the API with JSON
 
-# Contas bancárias da Transfeera
+The API only supports JSON, we will not support another format. Even if you do not use the `Content-Type: application / json; charset = utf-8` the response will be in JSON and with charset utf-8.
+
+# Batch statuses
+- AGUARDANDO_RECEBIMENTO: Awaiting to receive the total amount of the batch in our bank account
+- RECEBIDO: We have identified the payment of the batch
+- FINALIZADO: We have made all transfers and sent the report
+- REMOVIDO: Removed batch
+- RASCUNHO: Batch in draft accepts new transfers until closed
+- DEVOLVIDO: The total amount of the batch, that is, the sum of all transfers, was refunded to the user
+
+
+# Transfer status
+- CRIADA: Successfully created
+- RECEBIDO: We have identified the payment for the transfer in our bank account
+- TRANSFERIDO: We have made the transfer, but still without bank receipt
+- FINALIZADO: We have made the transfer, and the banck receipt is available
+- REMOVIDO: Removed
+- FALHA: We tried to make the payment, however, due to incorrect data or failure to communicate with the internet banking, the transfer was not made
+
+# Our bank accounts
 
 ## Banco do Brasil
-- Agência: 5214-0
-- Conta: 13568-2
+- Agency: 5214-0
+- Account: 13568-2
 
 ## Santander
-- Agência: 0159
-- Conta: 13006828-3
+- Agency: 0159
+- Account: 13006828-3
 
 ## Bradesco
-- Agência: 2232
-- Conta: 40605-8
+- Agency: 2232
+- Account: 40605-8
 
 ## Itaú
-- Agência: 8842
-- Conta: 47600-7
+- Agency: 8842
+- Account: 47600-7
 
 ## Caixa Econômica
-- Agência: 3282
-- Conta: 1172-7
+- Agency: 3282
+- Account: 1172-7
 
 ## Sicoob
-- Agência: 3039
-- Conta: 62277-0
+- Agency: 3039
+- Account: 62277-0
 
-# Tipo de contas suportados
-- CONTA_CORRENTE: Conta corrente
-- CONTA_POUPANCA: Conta poupança
+# Suported accounts
+- CONTA_CORRENTE: Current account
+- CONTA_POUPANCA: Savings account
 - CAIXA_FACIL: Conta caixa fácil
 
-# Criar lote sem nenhuma transferência
+# Create batch without any transfer
 
 ## Request
 `POST /batch`
 
 ### Body
-`Precisa ser enviado um objeto vazio.`
+`Required to send an empty object.`
 ```
 {
 }
@@ -115,11 +117,11 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 
 ```
 {
-  id: #idDoLoteCriado
+  id: #createdBatchId
 }
 ```
 
-# Criar lote com transferências
+# Create batch with transfers
 ### Request
 `POST /batch`
 
@@ -166,11 +168,11 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 
 ```
 {
-  id: #idDoLoteCriado
+  id: #createdBatchId
 }
 ```
 
-# Editar lote
+# Edit batch
 ### Request
 `PUT /batch/{id}`
 
@@ -182,7 +184,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
     "payer_cpf_cnpj": "73677801400",
     "transfers": [
        {
-        "id": 5483, #caso queira editar uma transferência dentro do lote
+        "id": 5483, #if you want to edit a transfer within the batch
         "value": 25.0,
         "integration_id": 2,
         "destination_bank_account": {
@@ -198,7 +200,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
         }
        },
        {
-        ## sem ID vai criar uma nova transferência
+        ## without ID will create a new transfer
         "value": 25.0,
         "integration_id": 2,
         "destination_bank_account": {
@@ -230,7 +232,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 }
 ```
 
-## Consultar lote
+## Get bacth data
 
 ### Request
 `GET /batch/{id}`
@@ -252,7 +254,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 }
 ```
 
-## Fechar lote
+## Close batch
 
 ### Request
 `POST /batch/{id}/close`
@@ -268,12 +270,12 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 }
 ```
 
-## Excluir lote
+## Remove batch
 
 ### Request
 `DELETE /batch/{id}`
 
-## Consultar lotes
+## Get batches data
 
 ### Request
 `GET /batch`
@@ -303,7 +305,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ]
 ```
 
-## Criar transferência
+## Create transfer
 
 ### Request
 `POST /batch/{id}/transfer`
@@ -341,7 +343,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 }
 ```
 
-## Consultar transferência
+## Get transfer data
 
 ### Request
 `GET /transfer/{id}`
@@ -361,7 +363,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 }
 ```
 
-## Consultar transferências dentro de um lote
+## Get transfer data inside a batch
 
 ### Request
 `GET /batch/{id}/transfer`
@@ -397,12 +399,12 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ]
 ```
 
-## Excluir transferência
+## Remove transfer
 
 ### Request
 `DELETE /batch/{id}/transfer/{id}`
 
-## Consultar bancos
+## Get banks data
 `GET /bank`
 
 ### Response
@@ -436,7 +438,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 ]
 ```
 
-## Consultar favorecidos
+## Get recipient data
 `GET /destinationBankAccount`
 
 ### Response
