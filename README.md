@@ -99,7 +99,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 # Suported accounts
 - CONTA_CORRENTE: Current account
 - CONTA_POUPANCA: Savings account
-- CAIXA_FACIL: Conta caixa fácil
+- CAIXA_FACIL: "caixa fácil" account
 
 ## Create batch without any transfer
 
