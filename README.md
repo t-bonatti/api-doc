@@ -1,28 +1,28 @@
-# Introdução
+# Introduction
 
-- [Introdução](#introdução)
-- [Autenticação](#autenticação)
-- [Utilização da API via JSON](#utilização-da-api-via-json)
-- [Status dos lotes](#status-dos-lotes)
-- [Status das transferências](#status-das-transferências)
-- [Contas bancárias da Transfeera](#contas-bancárias-da-transfeera)
+- [Introduction](#introduction)
+- [Authentication](#authentication)
+- [Using the API with JSON](#using-the-api-with-json)
+- [Batch statuses](#batch-statuses)
+- [Transfer statuses](#transfer-statuses)
+- [Our bank accounts](#our-bank-accounts)
 
 # API
 
-- [Tipo de contas suportados](#tipo-de-contas-suportados)
-- [Criar lote sem nenhuma transferência](#criar-lote-sem-nenhuma-transferência)
-- [Criar lote com transferências](#criar-lote-com-transferências)
-- [Editar lote](#editar-lote)
-- [Consultar lote](#consultar-lote)
-- [Fechar lote](#fechar-lote)
-- [Excluir lote](#excluir-lote)
-- [Consultar lotes](#consultar-lotes)
-- [Criar transferência](#criar-transferência)
-- [Consultar transferência](#consultar-transferência)
-- [Consultar transferências dentro de um lote](#consultar-transferências-dentro-de-um-lote)
-- [Excluir transferência](#excluir-transferência)
-- [Consultar bancos](#consultar-bancos)
-- [Consultar favorecidos](#consultar-favorecidos)
+- [Suported accounts](#suported-accounts)
+- [Create batch without any transfer](#create-batch-without-any-transfer)
+- [Create batch with transfers](#create-batch-with-transfers)
+- [Edit batch](#edit-batch)
+- [Get batch data](#get-batch-data)
+- [Close batch](#close-batch)
+- [Remove batch](#remove-batch)
+- [Get batches data](#get-batches-data)
+- [Create transfer](#create-transfer)
+- [Get transfer data](#get-transfer-data)
+- [Get transfer data inside a batch](#get-transfer-data-inside-a-batch)
+- [Remove transfer](#remove-transfer)
+- [Get banks data](#get-banks-data)
+- [Get recipient data](#get-recipient-data)
 
 
 # Introduction
@@ -62,7 +62,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 - DEVOLVIDO: The total amount of the batch, that is, the sum of all transfers, was refunded to the user
 
 
-# Transfer status
+# Transfer statuses
 - CRIADA: Successfully created
 - RECEBIDO: We have identified the payment for the transfer in our bank account
 - TRANSFERIDO: We have made the transfer, but still without bank receipt
@@ -101,9 +101,9 @@ The API only supports JSON, we will not support another format. Even if you do n
 - CONTA_POUPANCA: Savings account
 - CAIXA_FACIL: Conta caixa fácil
 
-# Create batch without any transfer
+## Create batch without any transfer
 
-## Request
+### Request
 `POST /batch`
 
 ### Body
@@ -113,7 +113,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 }
 ```
 
-## Response
+### Response
 
 ```
 {
@@ -121,7 +121,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 }
 ```
 
-# Create batch with transfers
+## Create batch with transfers
 ### Request
 `POST /batch`
 
@@ -172,7 +172,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 }
 ```
 
-# Edit batch
+## Edit batch
 ### Request
 `PUT /batch/{id}`
 
@@ -232,7 +232,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 }
 ```
 
-## Get bacth data
+## Get batch data
 
 ### Request
 `GET /batch/{id}`
