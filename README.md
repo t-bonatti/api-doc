@@ -31,9 +31,9 @@ The Transfeera API enables external applications to communicate with your accoun
 
 # Authentication
 
-The authentication of the requests is performed using a token, to get enable access to the API and generate a Token, please contact us by email contato@transfeera.com.
+The authentication of the requests is performed using a token, to enable access to the API and generate a Token, please contact us by email contato@transfeera.com.
 
-When we enabled the API for your user, access our platform, and in the menu with your name click on "Segurança" (Security), and in the "API" section generate a token.
+When we enable the API for your user, access our platform, and in the menu with your name click on "Segurança" (Security), and in the "API" section generate a token.
 
 With the token you obtained, on every request to our API include a header with the token like this:
 ```
