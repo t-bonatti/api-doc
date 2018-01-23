@@ -9,7 +9,7 @@
 
 # API
 
-- [Suported accounts](#suported-accounts)
+- [Supported accounts](#supported-accounts)
 - [Create batch without any transfer](#create-batch-without-any-transfer)
 - [Create batch with transfers](#create-batch-with-transfers)
 - [Edit batch](#edit-batch)
@@ -66,7 +66,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 - CRIADA: Successfully created
 - RECEBIDO: We have identified the payment for the transfer in our bank account
 - TRANSFERIDO: We have made the transfer, but still without bank receipt
-- FINALIZADO: We have made the transfer, and the banck receipt is available
+- FINALIZADO: We have made the transfer, and the bank receipt is available
 - REMOVIDO: Removed
 - FALHA: We tried to make the payment, however, due to incorrect data or failure to communicate with the internet banking, the transfer was not made
 
@@ -96,7 +96,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 - Agency: 3039
 - Account: 62277-0
 
-# Suported accounts
+# Supported accounts
 - CONTA_CORRENTE: Current account
 - CONTA_POUPANCA: Savings account
 - CAIXA_FACIL: "caixa fácil" account
