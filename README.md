@@ -468,14 +468,14 @@ The API only supports JSON, we will not support another format. Even if you do n
 
 ```
 {
-    "id": "136476",
-    "name": "Mateus rossato",
-    "cpf_cnpj": "08910914912",
-    "agency": "4783",
-    "agency_digit": "X",
-    "account": "55344",
+    "id": "123",
+    "name": "Fulano de tal",
+    "cpf_cnpj": "67312962289",
+    "agency": "123",
+    "agency_digit": "1",
+    "account": "321",
     "account_digit": "1",
-    "bank_id": "6"
+    "bank_id": "4"
 }
 ```
 
