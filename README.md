@@ -478,6 +478,3 @@ The API only supports JSON, we will not support another format. Even if you do n
     "bank_id": "4"
 }
 ```
-
-
-
