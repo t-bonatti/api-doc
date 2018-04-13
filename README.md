@@ -23,6 +23,7 @@
 - [Remove transfer](#remove-transfer)
 - [Get banks data](#get-banks-data)
 - [Get recipient data](#get-recipient-data)
+- [Get recipient data that received payments](#get-recipient-data-that-received-payments)
 
 
 # Introduction
@@ -459,3 +460,24 @@ The API only supports JSON, we will not support another format. Even if you do n
     }
 ]
 ```
+
+## Get recipient data that received payments
+`GET /destinationBankAccount/receivedPayments/{cpfCnpj}`
+
+### Response
+
+```
+{
+    "id": "136476",
+    "name": "Mateus rossato",
+    "cpf_cnpj": "08910914912",
+    "agency": "4783",
+    "agency_digit": "X",
+    "account": "55344",
+    "account_digit": "1",
+    "bank_id": "6"
+}
+```
+
+
+
