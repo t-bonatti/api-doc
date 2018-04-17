@@ -355,7 +355,7 @@ The API only supports JSON, we will not support another format. Even if you do n
     "id": "5490",
     "value": 5,
     "status": "RECEBIDO",
-    "status_description": null # only filled when transfer fail
+    "status_description": null, # only filled when transfer fail
     "integration_id": null,
     "created_at": "2017-10-13T14:34:01.000Z",
     "destination_bank_account_id": 5027,
@@ -377,7 +377,7 @@ The API only supports JSON, we will not support another format. Even if you do n
         "id": "5490",
         "value": 5,
         "status": "RECEBIDO",
-        "status_description": null # only filled when transfer fail
+        "status_description": null, # only filled when transfer fail
         "created_at": "2017-10-13T14:34:01.000Z",
         "integration_id": null,
         "DestinationBankAccount": {
