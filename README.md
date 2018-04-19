@@ -130,7 +130,10 @@ The API only supports JSON, we will not support another format. Even if you do n
 
 ```
 {
-    "transfers": [
+    "name": "",
+    "payer_name": "",
+    "payer_cpf_cnpj": "",
+    "transfers": [
        {
         "value": 25.0,
         "integration_id": 2,
@@ -181,7 +184,8 @@ The API only supports JSON, we will not support another format. Even if you do n
 
 ```
 {
-    "payer_name": "Fulano souza",
+    "name": "",
+    "payer_name": "Fulano souza",
     "payer_cpf_cnpj": "73677801400",
     "transfers": [
        {
