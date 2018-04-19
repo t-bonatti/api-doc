@@ -23,7 +23,7 @@
 - [Remove transfer](#remove-transfer)
 - [Get banks data](#get-banks-data)
 - [Get recipient data](#get-recipient-data)
-- [Get recipient data that received payments](#get-recipient-data-that-received-payments)
+- [Get recipient data that has payments](#get-recipient-data-that-has-payments)
 
 
 # Introduction
@@ -463,8 +463,8 @@ The API only supports JSON, we will not support another format. Even if you do n
 ]
 ```
 
-## Get recipient data that received payments
-`GET /destinationBankAccount/receivedPayments/{cpfCnpj}`
+## Get recipient data that has payments
+`GET /destinationBankAccount/hasPayments/{cpfCnpj}`
 
 ### Response
 
