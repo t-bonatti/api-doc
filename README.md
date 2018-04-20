@@ -100,7 +100,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 # Supported accounts
 - CONTA_CORRENTE: Current account
 - CONTA_POUPANCA: Savings account
-- CAIXA_FACIL: "caixa fácil" account
+- CONTA_FACIL: "conta fácil" account for Caixa Econômica
 
 ## Create batch without any transfer
 
@@ -146,7 +146,7 @@ The API only supports JSON, we will not support another format. Even if you do n
           "agency_digit": "0",
           "account": "12345",
           "account_digit": "1",
-          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CONTA_FACIL
         }
        },
        {
@@ -161,7 +161,7 @@ The API only supports JSON, we will not support another format. Even if you do n
           "agency_digit": "0",
           "account": "12345",
           "account_digit": "1",
-          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CONTA_FACIL
         }
        }
     ]
@@ -201,7 +201,7 @@ The API only supports JSON, we will not support another format. Even if you do n
           "agency_digit": "0",
           "account": "12345",
           "account_digit": "1",
-          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CONTA_FACIL
         }
        },
        {
@@ -217,7 +217,7 @@ The API only supports JSON, we will not support another format. Even if you do n
           "agency_digit": "0",
           "account": "12345",
           "account_digit": "1",
-          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+          "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CONTA_FACIL
         }
        }
     ]
@@ -330,7 +330,7 @@ The API only supports JSON, we will not support another format. Even if you do n
     "agency_digit": "0",
     "account": "12345",
     "account_digit": "1",
-    "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL
+    "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CONTA_FACIL
   }
 }
 ```
@@ -395,7 +395,7 @@ The API only supports JSON, we will not support another format. Even if you do n
             "agency_digit": null,
             "account": "123",
             "account_digit": "1",
-            "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CAIXA_FACIL,
+            "account_type": "CONTA_CORRENTE" #CONTA_CORRENTE || CONTA_POUPANCA || CONTA_FACIL,
             "Bank": {
               "name": "Banco do Brasil"
             }
