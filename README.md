@@ -70,6 +70,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 - FINALIZADO: We have made the transfer, and the bank receipt is available
 - REMOVIDO: Removed
 - FALHA: We tried to make the payment, however, due to incorrect data or failure to communicate with the internet banking, the transfer was not made
+- DEVOLVIDO: We have returned the value to client
 
 # Our bank accounts
 
