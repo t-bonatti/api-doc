@@ -286,6 +286,8 @@ The API only supports JSON, we will not support another format. Even if you do n
 ### Request
 `GET /batch?endDate=2018-04-30&initialDate=2018-04-01&page=0`
 
+- quantity per page: 45
+
 ### Response
 
 ```
