@@ -60,7 +60,6 @@ The API only supports JSON, we will not support another format. Even if you do n
 - FINALIZADO: We have made all transfers and sent the report
 - REMOVIDO: Removed batch
 - RASCUNHO: Batch in draft accepts new transfers until closed
-- DEVOLVIDO: The total amount of the batch, that is, the sum of all transfers, was refunded to the user
 
 
 # Transfer statuses
