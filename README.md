@@ -422,39 +422,27 @@ The API only supports JSON, we will not support another format. Even if you do n
 [
     {
         "id": 5,
-        "name": "Itaú",
-        "code": "341",
-        "image": "itau.svg"
+        "name": "Itaú"
     },
     {
         "id": 1,
-        "name": "Santander",
-        "code": "033",
-        "image": "santander.svg"
+        "name": "Santander"
     },
     {
         "id": 4,
-        "name": "Bradesco",
-        "code": "237",
-        "image": "bradesco.svg"
+        "name": "Bradesco"
     },
     {
         "id": 6,
-        "name": "Banco do Brasil",
-        "code": "001",
-        "image": "bb.svg"
+        "name": "Banco do Brasil"
     },
     {
         "id": 7,
-        "name": "Sicoob",
-        "code": "756",
-        "image": "sicoob.svg"
+        "name": "Sicoob"
     },
     {
         "id": 3,
-        "name": "Caixa Econômica",
-        "code": "104",
-        "image": "caixa.svg"
+        "name": "Caixa Econômica"
     }
 ]
 ```
