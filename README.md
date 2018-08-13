@@ -100,7 +100,7 @@ The API only supports JSON, we will not support another format. Even if you do n
 # Supported accounts
 - CONTA_CORRENTE: Current account
 - CONTA_POUPANCA: Savings account
-- CONTA_FACIL: "conta fácil" account for Caixa Econômica
+- CONTA_FACIL: "conta fácil" account for Caixa Econômica and Banco do Brasil
 
 ## Create batch without any transfer
 
