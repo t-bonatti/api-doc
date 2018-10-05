@@ -97,6 +97,18 @@ The API only supports JSON, we will not support another format. Even if you do n
 - Agency: 3039
 - Account: 62277-0
 
+## Votorantin / Neon
+- Agency: 2232
+- Account: 144938-9
+
+## Banco Inter
+- Agency: 0001
+- Account: 1162530-9
+
+## Sicredi
+- Agency: 2602
+- Account: 54058-7
+
 # Supported accounts
 - CONTA_CORRENTE: Current account
 - CONTA_POUPANCA: Savings account
